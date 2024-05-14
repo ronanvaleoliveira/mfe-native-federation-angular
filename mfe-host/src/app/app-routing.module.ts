@@ -4,6 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutComponent } from './about/about.component';
 
+// Add this import:
+import { loadRemoteModule } from '@angular-architects/native-federation';
+
 const routes: Routes = [
   {
     path:'',
@@ -16,12 +19,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
 
-  // // Add this route:
-  // {
-  //   path: 'flights',
-  //   loadComponent: () =>
-  //     loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
-  // },
+  // Add this route:
+  {
+    path: 'flights',
+    loadComponent: () =>
+      loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
+  },
 
   {
     path: '**',
