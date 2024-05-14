@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mfe-1';
+
+  search(): void {
+    alert('Not implemented in this demo!');
+  }
 }
